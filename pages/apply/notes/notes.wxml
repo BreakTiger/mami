@@ -1,0 +1,10 @@
+<!--pages/apply/notes/notes.wxml-->
+
+<view class="outbox">
+<view class="innerbox" >
+      <text class="notes">{{content}}</text>
+      </view>
+      <view class="bottom_box">
+      <button class="agree" bindtap='clickagree'>我同意</button>
+      </view>
+</view>

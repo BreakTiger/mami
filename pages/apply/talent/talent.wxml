@@ -1,0 +1,40 @@
+<!--pages/apply/talent/talent.wxml-->
+<view class="battle-container">
+  <form bindsubmit="bindSave" class="third-part">
+    <view class="page">
+      <!--文章  -->
+      <view class="second-part">
+        <!-- <textareaname='ar'/> -->
+        <textarea class="idea-text"  placeholder='为自己拉票加油'  placeholder-style='' auto-focus name='inter' >
+        </textarea>
+      </view>
+      <!--图片视频  -->
+      <view class='media'>
+        <!--上传的图片展示  -->
+        <view class='showimg' wx:for='{{imgbox3}}' wx:key=''>
+          <image src='{{item}}' mode='widthFix'></image>
+          <image src="../../../imgs/apply/delete.png" class="delate" data-index='{{index}}' bindtap='delateimg'></image>
+        </view>
+        <!--上传的视频展示  -->
+        <view class='showimg' wx:if='{{video}}'>
+          <video src='{{video}}'></video>
+          <image src="../../../imgs/apply/delete.png" style='width:36rpx;height:36rpx;position: absolute;top:-18rpx;right: -10rpx' bindtap='delatevideo'></image>
+        </view>
+        <!--上传图片入口  -->
+        <view class='addimg' bindtap='addimage' wx:if='{{imgbox3.length<9}}'>
+          <image src='../../../imgs/apply/add.png'></image>
+       
+        </view>
+        <!--上传是视频入口  -->
+        <view class='addimg' wx:if='{{!video}}' bindtap='bindButtonTap'>
+          <image src='../../../imgs/apply/video.png'></image>
+        
+        </view>
+        <!--上传语音入口  -->
+      </view>
+    </view>
+    <view class="imagebox">
+      <button class="issue" form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

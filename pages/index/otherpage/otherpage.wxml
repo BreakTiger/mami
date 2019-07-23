@@ -1,0 +1,148 @@
+<!--pages/index/otherpage/otherpage.wxml-->
+<view class="main-contain">
+  <view class="bac">
+    <view class="sharebox">
+      <image class="share-icon" bindtap='shareInto' src="/imgs/index/share.png"></image>
+    </view>
+    <!-- 用户名 -->
+    <view class="name">
+      <view class="name_left" >{{username}}</view>
+      <view class="usercode">ID:{{usernumber}}</view>
+
+    </view>
+    <!-- 地区简介 -->
+    <view clsss="region">
+      <view class="leftpart">
+        <view class="city">
+          <text class="sq"><text class="dot"></text>{{organization}}</text>|
+          <text class="talent">{{group}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 用户头像 -->
+    <view class="rightimg" bindtap='editInto'>
+      <image class="userimg" src="{{userimage}}"></image>
+    </view>
+    <!-- 投票部分开始 -->
+    <view class="listpart">
+      <view class="vote">
+        <view class="num">{{country_rank}}</view>
+        <view class="tp">全国排名</view>
+      </view>
+      <view class="reward">
+        <view class="num">{{area_rank}}</view>
+        <view class="sj">赛区排名</view>
+      </view>
+      <view class="moods">
+        <view class="num">{{vote}}</view>
+        <view class="sj">人气值</view>
+
+      </view>
+    </view>
+
+    <view class="clearfloat"></view>
+    <!-- 个人才艺展示开始 -->
+    <view class="maintalent">
+      <view class="talenttitle">
+        <text class="show">个人才艺展示</text>
+      </view>
+      <view class="textdetai">
+        <text class="textdetail">{{manifesto}}</text>
+      </view>
+      <!--图片视频  -->
+      <view class='media'>
+        <!--上传的图片展示  -->
+        <view class='showimg' wx:for='{{image}}' wx:key='unique'>
+          <image src='{{item}}' bindtap="previewImage" data-item="{{item}}" mode="aspectFill"></image>
+          <!-- <image src="/imgs/apply/delete.png" class="delate" data-index='{{index}}' bindtap='delateimg'></image> -->
+        </view>
+        <!--上传的视频展示  -->
+        <view class='showimg' wx:if='{{video}}'>
+          <video src='{{video}}' ></video>
+        </view>
+        <!--上传图片入口  -->
+        <!--上传图片入口  -->
+        <view class='addimg' bindtap='addimage' wx:if='{{imgbox3.length<3}}'>
+          <!-- <image src='/imgs/apply/add.png'></image> -->
+        </view>
+        <!--上传是视频入口  -->
+        <view class='addimg' wx:if='{{!video}}' bindtap='bindButtonTap'>
+          <!-- <image src='/imgs/apply/video.png'></image> -->
+        </view>
+      </view>
+    </view>
+    <view class="part-three">
+      <view class="message">
+        <text>全部留言</text>{{liuyannum}}
+      </view>
+      <!-- 留言列表展示 -->
+
+<view>
+      <view class="guestbook" wx:if="{{itemarray.length>0}}">
+        <view class="messagelist" wx:for="{{itemarray}}" wx:key="unique">
+          <view class="leftimg">
+            <image class="messageimg" src="{{item.userimage}}"></image>
+          </view>
+          <view class="rightcontain">
+            <view class="othername">
+              <text>{{item.username}}</text>
+            </view>
+            <view class="time">{{item.shijian}}</view>
+            <view>
+              <view class="transmit-show" bindtap="collect" data-item="{{item}}">
+
+                <!-- 点赞开始 -->
+
+                <view class="transmit-show" bindtap="zan" data-item="{{item}}">
+                  <view wx:if="{{item.priase}}">
+                    <image src="{{zans}}" class="goods_collect_img"></image>
+                    <text class="zansnum">{{item.content.praise}}</text>
+                  </view>
+                  <view wx:else>
+                    <image src="{{zan}}" class="goods_collect_img"></image>
+                    <text class="zansnum">{{item.content.praise}}</text>
+                  </view>
+                </view>
+                <!-- 点赞结束 -->
+              </view>
+            </view>
+            <view class="messages"> {{item.content.content}}</view>
+            <view>
+              <view class='showimga'>
+                <block wx:key='unique' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==1}}">
+                  <image mode='scaleToFill' class="pics1" src='{{pic}}'></image>
+                </block>
+                <block wx:key='unique' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==2}}">
+                  <image mode='scaleToFill' class="pics2" src='{{pic}}'></image>
+                </block>
+                <block wx:key='unique' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==3}}">
+                  <image mode='scaleToFill' class="pics3" src='{{pic}}'></image>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="clearfloat"></view>
+      </view>
+<view class="nullpage" wx:else>
+    <image class="bacimg" src="/imgs/index/bac.png"></image>
+    <view class="nulltext">暂无任何数据~</view>
+  </view>
+</view>
+
+
+    </view>
+    <view class="bottomtab">
+      <view class="btn_message">
+        <view class="tp_left" bindtap='voteInto'>
+          <image class="voteicon" src="/imgs/index/icon_ticket@2x.png"></image>
+          <text>投票</text>
+        </view>
+        <view class="ly_right" bindtap='messageInto'>
+          <image class="voteicon" src="/imgs/index/icon_leave@2x.png"></image>
+          <text>留言</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

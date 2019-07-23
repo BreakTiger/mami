@@ -1,0 +1,6 @@
+<view class="main" wx:if="{{init}}">
+  <view>
+    <image class="img" src="{{src}}"></image>
+  </view>
+  <button class="btn" bindtap="clickapply">保存到相册</button>
+</view>

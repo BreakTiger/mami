@@ -1,0 +1,9 @@
+<template name="lunbo">
+  <swiper autoplay="true" circular="true"  class="swiper-box" indicator-dots="true" indicator-color="rgba(255,255,255, .3)" indicator-active-color="#ffffff">
+    <block wx:for="{{banner}}" wx:key="banner">
+      <swiper-item>
+        <image src="{{item.image}}" class="slideImage" mode="widthFix" style="width: 100%" bindtap='slideshowInto' />
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

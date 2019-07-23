@@ -1,0 +1,51 @@
+<!--pages/me/messagemore/messagemore.wxml-->
+<view class="part-three">
+
+  <!-- 留言列表展示 -->
+  <view class="guestbook">
+    <view class="messagelist" wx:for="{{itemarray}}" wx:key="unique">
+      <view class="leftimg">
+        <image class="messageimg" src="{{avatarUrl}}"   bindtap='clickInto' data-item="{{item}}"></image>
+      </view>
+      <view class="rightcontain">
+        <view class="othername">
+          <text>{{username}}</text>
+        </view>
+        <view class="time">{{item.created_at}}</view>
+        <view>
+          <view class="transmit-show" bindtap="collect" data-item="{{item}}">
+            <view class='num-text' bindtap='dianzan' data-index="{{index}}">
+              <image src='/imgs/me/delete.png' data-id="{{item.content.id}}" bindtap='deleteinto' style='width: 33rpx; height:36rpx;margin-top:30rpx;'></image>
+            </view>
+          </view>
+        </view>
+        <view class="messages" data-id="{{item.id}}">{{item.content.content}}</view>
+        <view class='showimga'>
+          <block wx:key='' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==1}}">
+            <image class="pics1" src='{{pic}}'></image>
+          </block>
+          <block wx:key='' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==2}}">
+            <image class="pics2" src='{{pic}}'></image>
+          </block>
+          <block wx:key='' wx:for="{{item.content.image}}" wx:for-item="pic" wx:if="{{item.content.image.length==3}}">
+            <image class="pics3" src='{{pic}}'></image>
+          </block>
+        </view>
+        <view class="otherinformation">
+          <view class="otherleft">
+            <image class="otherimages" src="{{item.userimage}}" bindtap='imageInto' data-item="{{item}}"></image>
+            <text class="otherusername">{{item.username}}</text>
+          </view>
+          <view class="otherright">
+            <image class="otherzan" src="/imgs/me/zan.png"></image>
+            <text class="oherzans">{{item.vote}}万</text>
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+
+    <view class="clearfloat"></view>
+  </view>
+</view>

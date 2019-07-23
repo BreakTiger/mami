@@ -1,0 +1,164 @@
+/* pages/me/messagemore/messagemore.wxss */
+
+.part-three {
+  width: 100%;
+  height: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+  padding-bottom: 43rpx;
+}
+
+.message {
+  font-size: 46rpx;
+  color: #333;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+}
+
+.message text {
+  margin-right: 40rpx;
+}
+
+/* ggg */
+
+.messagelist {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+
+.leftimg {
+  width: 15%;
+  text-align: center;
+  float: left;
+}
+
+.messageimg {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.rightcontain {
+  width: 600rpx;
+  float: left;
+  /* height:auto;
+margin-top:12rpx; */
+  margin-bottom: 40rpx;
+}
+
+.time {
+  color: #999;
+  font-size: 22rpx;
+  margin-top: 8rpx;
+}
+
+.messages {
+  /* height:73rpx; */
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  line-height: 44rrpx;
+  color: #333;
+  margin-top: 28rpx;
+}
+
+.pics1 {
+  width: 100%;
+  height: 100%;
+  margin-top: 28rpx;
+  border-radius: 8rpx;
+ 
+}
+
+.pics2 {
+  width: 50%;
+  height: 150px;
+  margin-top: 28rpx;
+  border-radius: 8rpx;
+   margin-right: 10rpx;
+}
+
+.pics3 {
+  width: 33.33%;
+  height: 100px;
+  margin-top: 28rpx;
+  border-radius: 8rpx;
+   margin-right: 10rpx;
+}
+
+.showimga {
+  margin-bottom: 50rpx;
+  display: flex;
+}
+
+.clearfloat {
+  clear: both;
+}
+
+.goods_collect_img {
+  width: 28rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+
+.zan_num {
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 5rpx;
+}
+
+.transmit-show {
+  /* width: 20%; */
+  height: 80rpx;
+  float: right;
+  margin-top: -65rpx;
+}
+
+.otherinformation {
+  width: 610rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #efefef;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+}
+
+.otherimages {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+
+.otherusername {
+  font-size: 26rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.otherzan {
+  width: 28rpx;
+  height: 25rpx;
+  vertical-align: middle;
+}
+
+.otherleft {
+  width: 70%;
+  float: left;
+}
+
+.otherright {
+  width: 30%;
+  float: left;
+}
+
+.oherzans {
+  color: #333;
+  font-size: 24rpx;
+  margin-left: 19rpx;
+  margin-right: 20rpx;
+}

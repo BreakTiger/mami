@@ -1,0 +1,21 @@
+.picker-view {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.addr-item {
+  line-height: 35px;
+  text-align: center;
+  font-size:30rpx;
+}
+
+.show {
+  text-align: center;
+  margin: 20px;
+  height: 35px;
+}
+
+.choose {
+  margin: 20px 0;
+}

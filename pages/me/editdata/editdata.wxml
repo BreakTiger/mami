@@ -1,0 +1,67 @@
+<!--pages/me/editdata/editdata.wxml-->
+<form bindsubmit="teformSubmit">
+  <view class='inputs-head flexba'>
+    <view>
+      <text>头像</text>
+      <text class='f22' style='color:#F703F3;font-size:28rpx;'>*可修改</text>
+    </view>
+    <view class='flexa' bindtap='headImg'>
+      <view class='user-pic'>
+        <image mode='widthFix' class='img-w' src='{{userimage}}' style="height:100%;width:100%;"></image>
+      </view>
+      <!-- <image class='ml20 user-rt' src='../../../imgs/user/right.png'></image> -->
+    </view>
+  </view>
+
+  <view class="teamwork-container">
+    <!-- 输入列表 -->
+    <view class='teamwork-inputs'>
+
+      <view class='inputs-box flexba'>
+        <view>
+          <text>昵称</text>
+          <text class='f22' style='color:#F703F3;font-size:28rpx;'>*可修改</text>
+        </view>
+        <input maxlength='19' name="name" placeholder='请输入您的姓名' value="{{nickname?nickname:''}}" />
+      </view>
+    </view>
+
+
+
+
+    <!-- 报名成为了百万妈咪才会显示的列表 -->
+    <view style="margin-top:20rpx;" wx:if="{{is_info==1}}">
+      <view class='inputs-box flexba'>
+        <text>姓名</text>
+        <text>{{name}}</text>
+      </view>
+      <view class='inputs-box flexba'>
+        <text>出生日期</text>
+        <text>{{birthday}}</text>
+      </view>
+      <view class='inputs-box flexba'>
+        <text>参赛地区</text>
+        <text>{{district}}</text>
+      </view>
+      <view class='inputs-box flexba'>
+        <text>参赛机构</text>
+        <text>{{organization}}</text>
+      </view>
+      <view class='inputs-box flexba'>
+        <text>才艺类型</text>
+        <text>{{group}}</text>
+      </view>
+    </view>
+    <view class="name" style="margin-top:20rpx;" wx:if="{{is_info==1}}">
+      <view class='inputs-box flexba'>
+        <text>绑定手机号</text>
+        <text>{{phone}}</text>
+      </view>
+    </view>
+    <button class='teamwork-btn flexca abl' formType="submit">
+      <text>保存</text>
+    </button>
+
+  </view>
+
+</form>

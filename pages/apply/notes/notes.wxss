@@ -1,0 +1,40 @@
+/* pages/apply/notes/notes.wxss */
+
+.outbox{
+  width:100%;
+  margin:0 auto;
+  height:auto;
+  overflow: hidden;
+   font-size:28rpx;
+  color:#333333;
+}
+.innerbox{
+ padding-left: 33rpx;
+ padding-right: 29rpx;
+ margin-bottom:160rpx;
+ line-height: 65rpx;
+
+
+}
+
+.bottom_box{
+   width:100%;
+  position: fixed;
+  bottom: 0;
+  height: 140rpx;
+background:rgba(255,255,255,1);
+border-radius:60rpx 60rpx 0px 0px;
+box-shadow:8px 0px 16px rgba(0,0,0,0.2)
+
+}
+.agree{
+  width:480rpx;
+height:80rpx;
+/* background:rgba(160,6,251,1); */
+border-radius:8rpx;
+color:#FFFFFF;
+font-size: 32rpx;
+margin-top: 30rpx;
+background-image:linear-gradient(-45deg, #F803F2 0%, #A006FB 100%);
+
+}

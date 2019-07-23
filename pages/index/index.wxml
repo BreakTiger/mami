@@ -1,0 +1,250 @@
+<!--index.wxml-->
+
+<!-- 引导页 -->
+<!-- <view class="maincontent">
+<image class="imgs" src="/imgs/index/indeximg.jpg"></image>
+</view> -->
+
+<import src="/templates/lunbo/lunbo.wxml" />
+
+<view class="outbox">
+  <!-- 定位和搜索框 -->
+  <view class='in-m0' bindtap='toCity'>
+    <!-- 定位 -->
+    <view class='in_pos'>
+      <view class='in-img'>
+        <image src="/imgs/index/location_icon.png"></image>
+      </view>
+      <view class="retailStore">
+        <view class="cnaps  borderBottom">
+          <!-- <text>所在城市</text> -->
+        </view>
+      </view>
+      <view class='in-area'>
+        <input class='m-bbt' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{city}}-{{district}}' disabled></input>
+      </view>
+    </view>
+    <!-- 搜索框  -->
+    <view class='in-inputs' bindtap='searchInto'>
+      <image src="/imgs/index/search.png" style="width:24rpx;height:24rpx;" class="search"></image>
+      <!-- <icon type="search" size="15" color="#666666" class="search" /> -->
+      <text class="sqtext">搜索选手</text>
+    </view>
+  </view>
+  <view style='position: relative;margin-top: 88rpx'>
+    <template is="lunbo" data="{{banner,circular}}" />
+  </view>
+  <!-- tab切换 -->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <!-- 全国排行开始 -->
+  <view hidden="{{currentTab!==0}}">
+    <view class="guestbook" wx:if="{{name}}">
+      <view class="messagelist">
+        <view class="leftimg">
+          <image class="messageimg" bindtap='clickmypic' src="{{userimage}}" dat-item="{{item}}"></image>
+        </view>
+        <view class="rightcontain">
+          <view class="othername">
+            <text class="xuhao">{{ranking}}</text>
+            <text>{{name}}</text>
+          </view>
+          <view class="time">{{vote}}</view>
+          <view>
+          </view>
+        </view>
+      </view>
+      <view class="clearfloat"></view>
+    </view>
+    <!-- 前三名排行开始 -->
+    <view class="outbox" wx:if="{{datalist.length>0}}">
+      <view class="listbox">
+        <view class="paihang">
+          <!-- 第二条 -->
+          <block wx:if="{{datalist.length>1}}">
+            <view class="listimg">
+              <view class="imgbox" style="padding-top:57rpx;">
+                <image class="circle" src="/imgs/index/crown2@2x.png" bindtap='otherpageInto' data-item="{{datalist[1]}}"></image>
+                <image class="messageimg" src="{{datalist[1].userimage}}" data-item="{{datalist}}" bindtap='otherpageInto' data-item="{{datalist[1]}}"></image>
+                <view class="listname">{{datalist[1].name}}</view>
+                <view class="listnum">{{datalist[1].vote}}</view>
+                <view class="minezan" bindtap='voteInto' data-item="{{datalist[1]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[1].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <!-- 第一条 -->
+          <block wx:if='{{datalist.length>0}}'>
+            <view class="listimg">
+              <view class="imgbox">
+                <image class="circle1" src="/imgs/index/crown1@2x.png" bindtap='otherpageInto' data-item="{{datalist[0]}}"></image>
+                <image class="messageimg" src="{{datalist[0].userimage}}" bindtap='otherpageInto' data-item="{{datalist[0]}}"></image>
+                <view class="listname">{{datalist[0].name}}</view>
+                <view class="listnum">{{datalist[0].vote}}</view>
+                <view class="minezan" bindtap='voteInto' data-item="{{datalist[0]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[0].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <!-- 第三条 -->
+          <block wx:if='{{datalist.length>2}}'>
+            <view class="listimg">
+              <view class="imgbox" style="padding-top:57rpx;">
+                <image class="circle" src="/imgs/index/crown3@2x.png" bindtap='otherpageInto' data-item="{{datalist[2]}}"></image>
+                <image class="messageimg" src="{{datalist[2].userimage}}" bindtap='otherpageInto' data-item="{{datalist[2]}}"></image>
+                <view class="listname">{{datalist[2].name}}"</view>
+                <view class="listnum">{{datalist[2].vote}}</view>
+                <view class="minezan" bindtap='voteInto' data-item="{{datalist[2]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[2].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="dashang-default" wx:else>
+      <view>
+        <view class='default-img'>
+        </view>
+      </view>
+    </view>
+    <!-- 前三名排行结束 -->
+    <view class="guestbook" wx:for="{{arr2}}" wx:key="unique">
+      <view class="messagelist">
+        <view class="leftimg" data-item="{{item}}" bindtap='otherpageInto'>
+          <image class="messageimg" src="{{item.userimage}}"></image>
+        </view>
+        <view class="rightcontain">
+          <view class="othername">
+            <text class="xuhao">{{item.ranking}}</text>
+            <text>{{item.name}}</text>
+          </view>
+          <view class="time" bindtap='voteInto' data-item="{{item}}">{{item.vote}}
+            <image class="zan" src="/imgs/index/voteimg.png"></image>
+            <view class="mineclicknum">{{item.vote_num}}</view>
+          </view>
+          <view>
+          </view>
+        </view>
+      </view>
+      <view class="clearfloat"></view>
+    </view>
+
+  </view>
+
+  <!-- 本地排行开始 -->
+  <view hidden="{{currentTab!==1}}">
+    <view class="selectarea" bindtap='toArea' data-item='{{item}}'>
+      <image class="icondot" src="/imgs/index/icondot.png"></image>当前赛区：
+      <text>{{division}}</text>
+      <image src="/imgs/index/btn_next.png" class="nexticon"></image>
+    </view>
+    <view class="guestbook" wx:if="{{name}}">
+      <view class="messagelist">
+        <view class="leftimg">
+          <image class="messageimg" src="{{userimage}}" bindtap='clickmypic' data-item="{{item}}"></image>
+        </view>
+        <view class="rightcontain">
+          <view class="othername">
+            <text class="xuhao">{{ranking}}</text>
+            <text>{{name}}</text>
+          </view>
+          <view class="time">{{vote}}
+          </view>
+          <view>
+          </view>
+        </view>
+      </view>
+      <view class="clearfloat"></view>
+    </view>
+    <!-- 前三名排行开始 -->
+    <view class="outbox" wx:if="{{datalist.length>0}}">
+      <view class="listbox">
+        <view class="paihang" wx:if="{{datalist.length>1}}">
+          <block wx:if="{{datalist.length>1}}">
+            <view class="listimg" >
+              <view class="imgbox" style="padding-top:57rpx;">
+                <image class="circle" src="/imgs/index/crown2@2x.png" bindtap='otherpageInto' data-item="{{datalist[1]}}"></image>
+                <image class="messageimg" src="{{datalist[1].userimage}}" bindtap='otherpageInto' data-item="{{datalist[1]}}"></image>
+                <view class="listname">{{datalist[1].name}}</view>
+                <view class="listnum">{{datalist[1].vote}}</view>
+                <view class="minezan" bindtap='areaInto' data-item="{{datalist[1]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[1].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:if='{{datalist.length>0}}'>
+            <view class="listimg">
+              <view class="imgbox" >
+                <image class="circle1" src="/imgs/index/crown1@2x.png" bindtap='otherpageInto' data-item="{{datalist[0]}}"></image>
+                <image class="messageimg" src="{{datalist[0].userimage}}" bindtap='otherpageInto' data-item="{{datalist[0]}}"></image>
+                <view class="listname">{{datalist[0].name}}</view>
+                <view class="listnum">{{datalist[0].vote}}</view>
+                <view class="minezan" bindtap='areaInto' data-item="{{datalist[0]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[0].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:if='{{datalist.length>2}}'>
+            <view class="listimg">
+              <view class="imgbox" style="padding-top:57rpx;" >
+                <image class="circle" src="/imgs/index/crown3@2x.png" bindtap='otherpageInto' data-item="{{datalist[2]}}"></image>
+                <image class="messageimg" src="{{datalist[2].userimage}}" bindtap='otherpageInto' data-item="{{datalist[2]}}"></image>
+                <view class="listname">{{datalist[2].name}}"</view>
+                <view class="listnum">{{datalist[2].vote}}</view>
+                <view class="minezan" bindtap='areaInto' data-item="{{datalist[2]}}">
+                  <image class="zan1" src="/imgs/index/voteimg.png"></image>
+                  <text class="clicknum">{{datalist[2].vote_num}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="dashang-default" wx:else>
+      <view>
+        <view class='default-img'>
+        </view>
+      </view>
+    </view>
+    <!-- 前三名排行结束 -->
+    <!-- 第四名开始 -->
+    <view class="guestbook" wx:for="{{arr2}}" wx:key="unique">
+      <view class="messagelist">
+        <view class="leftimg" data-item="{{item}}" bindtap='otherpageInto'>
+          <image class="messageimg" src="{{item.userimage}}"></image>
+        </view>
+        <view class="rightcontain">
+          <view class="othername">
+            <text class="xuhao">{{item.ranking}}</text>
+            <text>{{item.name}}</text>
+          </view>
+          <view class="time" bindtap='areaInto' data-item="{{item}}">{{item.vote}}
+            <image class="zan" src="/imgs/index/voteimg.png"></image>
+            <view class="mineclicknum">{{item.vote_num}}</view>
+          </view>
+          <view>
+          </view>
+        </view>
+      </view>
+      <view class="clearfloat"></view>
+    </view>
+  </view>
+</view>
+
+
+<view class='page-add-data flexca' style="text-align:center;position:fixed;bottom:0;display:none;">
+  <text>{{pageTottomText}}</text>
+</view>

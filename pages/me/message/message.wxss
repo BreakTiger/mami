@@ -1,0 +1,44 @@
+/* pages/me/message/message.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.arrow {
+  width: 11rpx;
+  height: 20rpx;
+  padding-right: 40rpx;
+}
+
+.listtext {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.flexba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  width: 690rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  margin: 0 auto;
+  background: #fff;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20rpx;
+  box-shadow: 10rpx 0rpx 30rpx rgba(0, 0, 0, 0.08);
+  margin-top: 30rpx;
+}
+
+.list-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 24rpx;
+  padding-left: 40rpx;
+  vertical-align: middle;
+  font-size: 32rpx;
+  color: #333;
+}

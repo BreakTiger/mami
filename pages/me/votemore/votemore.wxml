@@ -1,0 +1,19 @@
+<!--pages/me/votemore/votemore.wxml-->
+<view class="guestbook">
+  <view class="messagelist" wx:for="{{itemarray}}" wx:key="unique">
+    <view class="leftimg">
+      <image class="messageimg" src="{{item.userimage}}" bindtap='imageInto' data-item="{{item}}"></image>
+    </view>
+    <view class="rightcontain">
+      <view class="othername">
+        <text>{{item.username}}</text>
+      </view>
+      <view class="time">{{item.shijian}} <image class="zan" src="/imgs/me/zan.png"></image></view>
+     
+      <view>
+     
+      </view>
+    </view>
+  </view>
+  <view class="clearfloat"></view>
+</view>

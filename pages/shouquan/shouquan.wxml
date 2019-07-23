@@ -1,0 +1,13 @@
+<!--pages/shouquan/shouquan.wxml-->
+<view class='container'>
+
+<image class="logo" src="../../imgs/index/logo.png"></image>
+  <button open-type="getUserInfo" class="tologin" bindgetuserinfo="confirm">微信授权体验</button>
+  <!-- <button class="toreturn" catchtap="back">返回首页</button> -->
+  <!-- 技术提供者说明 -->
+  <!-- <view class='t_provider'>
+    <navigator url=''>
+      <text class='linkaddress'>帝都网络提供技术支持</text>
+    </navigator>
+  </view> -->
+</view>

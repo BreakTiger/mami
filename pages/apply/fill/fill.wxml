@@ -1,0 +1,117 @@
+<import src="/templates/area/index.wxml" />
+
+<view class="fill">
+  基本资料</view>
+<view class="focus">请认真并准确地填写或修改您的报名基本资料</view>
+<!-- 请认真并准确地填写或修改您的报名基本资料 -->
+<view class="hong-container">
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="formSubmit2">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+          <!-- 手机号--------------->
+          <!-- 手机号码  此行注释超级重要 不能删掉 -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>手机号</text>
+            </view>
+            <view class='phoneright'>{{phone}}</view>
+          </view>
+
+          <!--姓名----------------------->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>姓名</text>
+            </view>
+            <input maxlength="20" name="name" placeholder='请输入姓名' value="{{user.name}}" />
+          </view>
+          <!-- 成立时间----------------->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>出生日期</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker mode="date" bindchange="bindDateChange" value="{{date}}" start="1918-09-01" end="2018-09-01">
+                  <view class="picker">
+                    {{date}}
+                  </view>
+                </picker>
+              </view>
+              <image src='/imgs/apply/next2@2x.png'></image>
+
+              <input style='display:none' maxlength="100" name="establish" value="{{date}}" />
+            </view>
+          </view>
+          <!-- 经营区域------------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>所在赛区</text>
+            </view>
+            <view class='flexa inputext' bindtap='selectArea'>
+              <view class="section">
+                {{region[0]}}-{{region[1]}}-{{region[2]}}
+              </view>
+              <image src='/imgs/apply/next2@2x.png'></image>
+              <input style='display:none' maxlength="100" name="address" value="{{region[0]}},{{region[1]}},{{region[2]}}" />
+            </view>
+          </view>
+
+          <!-- 参赛机构---------------------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>参赛机构</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker bindchange="goCansaiChange" value="{{cansaiIndex}}" range="{{cansaiArray}}">
+                  <view class="picker">
+                    {{cansaiArray[cansaiIndex]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='/imgs/apply/next2@2x.png'></image>
+              <input style='display:none' maxlength="100" name="branch" value="{{cansaiArray[cansaiIndex]}}" />
+            </view>
+          </view>
+
+          <!-- 才艺类型---------------------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>才艺类型</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker bindchange="gotalentChange" value="{{talentIndex}}" range="{{talentArray}}">
+                  <view class="picker">
+                    {{talentArray[talentIndex]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='/imgs/apply/next2@2x.png'></image>
+              <input style='display:none' maxlength="100" name="talenttype" value="{{talentArray[talentIndex]}}" />
+            </view>
+          </view>
+
+        </view>
+        <!-- 提交按钮 -->
+        <view class='bt-fixed'>
+          <button class='teamwork-btn flexca' formType="submit">
+            <text>下一步</text>
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+<view class='selectArea' wx:if="{{showArea}}">
+  <view class='areaTool'>
+    <view bindtap='hideArea' class='cancel'>取消</view>
+    <view bindtap='confirmArea' class='confirm'>确定</view>
+  </view>
+  <view class='areaBox'>
+    <template is="areaPicker" data="{{...areaPicker}}" />
+  </view>
+
+</view>

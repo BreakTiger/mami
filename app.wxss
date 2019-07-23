@@ -1,0 +1,42 @@
+/**app.wxss**/
+.container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+.dynamic-two-image{
+  width: 50%;  
+  text-align: center;
+}
+
+.dynamic-two-image image{
+  width: 100%;  
+  height: 360rpx;
+  text-align: center;
+}
+
+.dynamic-duo-image{
+  width: 33%;  
+  height: 250rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.dynamic-image{
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  width: 100%;
+}
+
+.dynamic-duo-image image{
+  width: 100%;    
+  object-fit: cover;
+  height: 250rpx;
+}

@@ -1,0 +1,108 @@
+/* pages/apply/fill/fill.wxss */
+@import 'vip.wxss';
+@import '/templates/area/index.wxss';
+
+page {
+  background-color: #fff;
+}
+
+.fill {
+  font-size: 46rpx;
+  color: #333;
+  margin-top: 61rpx;
+  margin-left: 31rpx;
+  margin-bottom: 23rpx;
+}
+
+.focus {
+  color: #999;
+  font-size: 24rpx;
+  margin-left: 31rpx;
+  margin-bottom: 71rpx;
+}
+
+.inputs-box .inputext {
+  /* font-size:26rpx; */
+  overflow: visible;
+}
+
+.only-text {
+  font-size: 30rpx;
+}
+
+.input-person {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.bt-fixed {
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  /* height: 200rpx; */
+}
+
+.inputs_o {
+  height: 88rpx;
+  padding: 20rpx 24rpx;
+  border-bottom: 1px solid #f7f7f7;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.inputs_i {
+  padding: 0 24rpx;
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+}
+
+.i-img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.i-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.flexba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexa {
+  display: flex;
+  align-items: center;
+}
+
+.selectArea {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  z-index: 99999;
+}
+
+.areaTool {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E3E3E3;
+}
+
+.areaTool .cancel, .areaTool .confirm {
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 15px;
+}

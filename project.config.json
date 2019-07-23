@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx047e5bfe813bd55f",
+	"projectname": "%E7%99%BE%E4%B8%87%E5%A6%88%E5%92%AA%E6%9C%80%E6%96%B0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "fb",
+					"pathName": "pages/apply/talent/talent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fb",
+					"pathName": "pages/apply/talent/talent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/me/pagedetail/pagedetail",
+					"query": "data=undefined"
+				},
+				{
+					"id": 3,
+					"name": "other",
+					"pathName": "pages/index/otherpage/otherpage",
+					"query": "id=3"
+				},
+				{
+					"id": -1,
+					"name": "ffbb",
+					"pathName": "pages/apply/fill/fill",
+					"query": "phone=13045678965"
+				},
+				{
+					"id": -1,
+					"name": "ll",
+					"pathName": "pages/index/otherpage/otherpage",
+					"query": "id=25"
+				},
+				{
+					"id": -1,
+					"name": "fill",
+					"pathName": "pages/apply/fill/fill",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fil",
+					"pathName": "pages/index/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ss",
+					"pathName": "pages/me/messagemore/messagemore",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fbddd",
+					"pathName": "pages/apply/talent/talent",
+					"query": ""
+				}
+			]
+		}
+	}
+}

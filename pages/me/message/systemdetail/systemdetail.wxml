@@ -1,0 +1,29 @@
+<!--pages/me/message/systemdetail/systemdetail.wxml-->
+
+<view class="page">
+<view class="main" wx:if="{{itemarray.length>0}}">
+<view class="main" wx:for="{{itemarray}}" wx:key="unique">
+  <view class="time">
+    <view class="pubdate">{{item.informdate}}</view>
+  </view>
+  <view class="card">
+    <view class="contain">
+      <view class="leftimg">
+        <image class="xt" src="../../../../imgs/me/icon4@2x.png"></image>
+      </view>
+      <view class="rightcontain">
+        <view class="title">系统消息</view>
+        <view class="messagedetail">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+</view>
+
+ <view class="nullpage" wx:else>
+    <image class="bacimg" src="/imgs/index/bac.png"></image>
+    <view class="nulltext">暂无任何数据~</view>
+  </view>
+
+  </view>

@@ -1,0 +1,74 @@
+<!--pages/me/me.wxml-->
+<view class="main">
+  <view class="top">
+    <view class="list-all" bindtap='clickdetail'>
+      <image class="picimg" src="{{userimage}}"></image>
+      <view class="list-right">
+        <view style="width:477rpx;">
+          <view class="name" style="max-width:249rpx;">{{username}}</view>
+           <text class="usercode">ID:{{usernumber}}</text>
+          <image bindtap="submit" class="arrow" src="{{editurl}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="card-bottom">
+      <view class="inner-card">
+        <view class="bottom-l" >
+          <view class="num" wx:if="{{is_info==1}}">{{country_rank}}</view>
+          <view class="num" wx:else>0</view>
+          <view class="tp">全国排名</view>
+        </view>
+        <view class="bottom-l">
+           <view class="num" wx:if="{{is_info==1}}">{{area_rank}}</view>
+          <view class="num" wx:else>0</view>
+          <view class="ds">赛区排名</view>
+        </view>
+        <view class="bottom-r" bindtap='clickmessage'>
+         <view class="sec-img"    style="width:6px;height:6px;border-radius:50%;background:red;float:right;margin-left:85rpx;position:absolute;margin-top:6rpx;"></view>
+          <image class="msg" src="../../imgs/me/msg.png"></image>
+           
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="foc-box" wx:if="{{itemarray1.length>0}}">
+    <view class="lkmore" bindtap='lookdetail'>
+      <view class="left_r">我最近投票的妈咪
+        <text class="right_q" bindtap='lookmore'>查看全部</text>
+        <image class="arrow_r" src="../../imgs/me/arrow.png"></image>
+      </view>
+    </view>
+    <view class="second-card">
+      <view class="focus" wx:for="{{itemarray1}}" wx:key="{{unique}}" style="height:120rpx;float:left;">
+        <image class="justme-pic" src="{{item.userimage}}" bindtap='focusdetail' data-item="{{item}}" style="float:left;"></image>
+      </view>
+    </view>
+  </view>
+  <view class='foc-box' wx:else>
+    <view class="second-card">
+      <view class='nodata'>暂未给任何人投票~</view>
+    </view>
+  </view>
+
+  <view class="foc-box" wx:if="{{itemarray.length>0}}">
+    <view class="lkmore" bindtap='lookdetail'>
+      <view class="left_r">我最近留言的妈咪
+        <text class="right_q" bindtap='lookmore_s'>查看全部</text>
+        <image class="arrow_r" src="../../imgs/me/arrow.png"></image>
+      </view>
+    </view>
+    <view class="second-card">
+      <view class="focus" wx:for="{{itemarray}}" wx:key="{{unique}}" style="height:120rpx;float:left;">
+        <image class="justme-pic" src="{{item.userimage}}" bindtap='focusdetail' data-item="{{item}}" style="float:left;"></image>
+      </view>
+    </view>
+
+  </view>
+  <view class='foc-box' wx:else>
+    <view class="second-card">
+      <view class='nodata'>暂未给任何人留言~</view>
+    </view>
+  </view>
+
+</view>

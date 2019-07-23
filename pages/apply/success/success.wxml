@@ -1,0 +1,19 @@
+<!--pages/apply/success/success.wxml-->
+<form bindsubmit="bindInto">
+<view class="submitbox">
+  <view class="successbox">
+    <image class="success" src="/imgs/apply/success.png"></image>
+    <view class="tips">提交成功 </view>
+    <view class="success_text">您的报名申请已经提交成功，平台将在3日内进行审核，审核结果请关注系统通知。</view>
+    <button form-type='submit' class='btn abl'>返回首页</button>
+  </view>
+
+  <!-- <view class="successbox">
+    <image class="success" src="/imgs/apply/fail.png"></image>
+    <view class="tips">提交失败 </view>
+    <view class="success_text">您的报名申请已经提交失败了呢，不妨重新提交一次吧。</view>
+    <button form-type='submit' class='btn abl' >重新提交</button>
+  </view> -->
+</view>
+</form>
+

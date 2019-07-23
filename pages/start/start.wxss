@@ -1,0 +1,21 @@
+/* pages/start/start.wxss */
+
+page {
+  height: 100%;
+}
+
+.maincontent{
+  width: 100%;
+  height: 100%;
+}
+
+/*不让滚动条出现*/
+
+page {
+  overflow: hidden;
+}
+
+.imgs {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,15 @@
+<import src="/templates/dynamic/dynamic-button-bar.wxml" />
+<import src="/templates/dynamic/dynamic-item-image.wxml" />
+<import src="/templates/dynamic/dynamic-item-video.wxml" />
+<import src="/templates/dynamic/dynamic-item-voice.wxml" />
+<import src="/templates/dynamic/dynamic-item-text.wxml" />
+<import src="/templates/dynamic/dynamic-item-battle.wxml" />
+<template name="dynamicItemList">
+  <view wx:for="{{itemArray}}" wx:key="{{unique}}">
+    <template is="dynamicItemBattle" data="{{item:item}}"></template>
+    <template is="dynamicItemImage" data="{{item:item}}"></template>
+    <template is="dynamicItemVideo" data="{{item:item}}"></template>
+    <template is="dynamicItemVoice" data="{{item:item}}"></template>
+    <template is="dynamicItemText" data="{{item:item}}"></template>
+  </view>
+</template>

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    
+    "pages/shouquan/shouquan",
+    "pages/start/start",
+    "pages/index/index",
+    "pages/apply/fill/fill",
+    "pages/index/poster/poster",
+    "pages/index/areaselect/areaselect",
+    "pages/me/me",
+    "pages/me/messagemore/messagemore",
+    "pages/me/editdata/editdata",
+    "pages/index/messageBoard/messageBoard",
+    "pages/index/search/search",
+    "pages/index/otherpage/otherpage",
+    "pages/me/pagedetail/pagedetail",
+    "pages/me/contactme/contactme",
+    "pages/me/mypage/mypage",
+    "pages/me/votemore/votemore",
+    "pages/me/message/message",
+    "pages/me/message/votedetail/votedetail",
+    "pages/me/message/systemdetail/systemdetail",
+    "libs/citySelector/switchcity/switchcity",
+    "pages/apply/success/success",
+    "pages/apply/talent/talent",
+    "pages/apply/apply",
+    "pages/apply/notes/notes",
+    "pages/apply/verification/verification"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "百万妈咪",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#F703F3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "助颜",
+        "iconPath": "imgs/index/tab_n_1.png",
+        "selectedIconPath": "imgs/index/tab_s_1.png"
+      },
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "报名",
+        "iconPath": "imgs/index/tab_n_2.png",
+        "selectedIconPath": "imgs/index/tab_s_2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "imgs/index/tab_n_3.png",
+        "selectedIconPath": "imgs/index/tab_s_3.png"
+      }
+    ]
+  }
+}

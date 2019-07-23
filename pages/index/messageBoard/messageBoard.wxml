@@ -1,0 +1,31 @@
+<!--pages/index/messageBoard/messageBoard.wxml-->
+<view class="contain">
+  <form bindsubmit='formsubmit'>
+    <view class='margin'>
+      <!-- 文字列表 -->
+      <view class='init'>
+        <textarea name="content" placeholder='为她打call~'>
+        
+        </textarea>
+      </view>
+          <!--图片  -->
+      <view class='media'>
+        <!--上传的图片展示  -->
+        <view class='showimg' wx:for='{{imgbox3}}' wx:key=''>
+          <image src='{{item}}'></image>
+          <image src="/imgs/apply/delete.png" class="delate" data-index='{{index}}' bindtap='delateimg'></image>
+        </view>
+        <!--上传图片入口  -->
+        <!--上传图片入口  -->
+        <view class='addimg' bindtap='addimage' wx:if='{{imgbox3.length<3}}'>
+          <image src='/imgs/apply/add.png'></image>
+        </view>
+       
+       
+      </view>
+
+      <button form-type='submit' class='btn abl'>发布</button>
+    </view>
+  </form>
+</view>
+

@@ -1,0 +1,22 @@
+<!--pages/index/areaselect/areaselect.wxml-->
+<view>
+  <view class='city-style'>
+    <view class='sity'>
+      <text class='current1'>当前赛区</text>
+      <text class='current2' bindtap='toget'>{{division}}</text>
+    </view>
+  </view>
+  <!-- 城市 -->
+  <view class='choose'>
+    <view style='margin-top: 60rpx; width: 100%; height: auto;' class='chhh'>
+      <view wx:for="{{cityList}}" wx:key="cityList" class='list'>
+        <view wx:if="{{item.id==id? true: false}}">
+          <text class='cityList ' bindtap='getCity' data-city="{{index}}" style="color:#07bd63;">{{item.organization}}</text>
+        </view>
+        <view wx:else>
+          <text class='cityList ' bindtap='getCity' data-city="{{index}}" >{{item.organization}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

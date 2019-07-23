@@ -1,0 +1,57 @@
+<!--pages/index/search/search.wxml-->
+<view>
+
+  <!-- 排序关键词 -->
+  <view class='focus-home'>
+    <!-- 1搜索 -->
+    <view class='header-box flexba'>
+      <!-- 收索框 -->
+      <view class="header">
+        <input maxlength="50" class="search" value='{{detailDatas.num}}' bindinput="bindseInput" placeholder='编号/昵称/姓名/手机号' placeholder-style="color:#C1C1C1;font-size:26rpx;"></input>
+        <icon type="search" size="15" color="#BFBFBF" />
+        
+      </view>
+      <view class='header-title' data-search='1' bindtap='reData'>搜索</view>
+    </view>
+  </view>
+  <!-- 商品内容  -->
+
+  <view class='contain' wx:if="{{servers.length>0}}">
+    <view class="guestbook" wx:for="{{servers}}" wx:key="unique">
+      <view class="messagelist" bindtap='clickimgInto' data-item="{{item}}">
+        <view class="leftimg">
+          <image class="messageimg" src="{{item.userimage}}"></image>
+        </view>
+        <view class="rightcontain">
+          <view class="othername">
+            <text class="xuhao">{{item.user_rank}}</text>
+            <text>{{item.username}}</text>
+          </view>
+          <view class="time">
+            <view class="usercode">ID:{{item.usernumber}}</view>
+
+          </view>
+          <view>
+          </view>
+        </view>
+        <view class="righticon">
+          <image class="zan" src="../../../../imgs/index/voteimg.png"></image>
+          <view class="mineclicknum">{{item.vote_num}}</view>
+        </view>
+      </view>
+      <view class="clearfloat"></view>
+    </view>
+  </view>
+  <!-- <view class='contain' wx:else>
+    <view class='nodata'>没有数据</view>
+  </view> -->
+ <view class="nullpage" wx:else>
+    <image class="bacimg" src="/imgs/index/bac.png"></image>
+    <view class="nulltext">暂无任何数据~</view>
+  </view>
+
+</view>
+<!-- &&底部加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

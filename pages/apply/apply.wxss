@@ -1,0 +1,43 @@
+/* pages/apply/apply.wxss */
+page{
+  -webkit-user-select:none;
+user-select:none;
+width:100%;
+overflow-x:hidden;
+height:100%;
+
+}
+.outbox{
+width:100%;
+height:100%;
+margin:0 auto;
+/* position:relative; */
+display:flex;
+
+}
+.applyimg{
+width:100%;
+height:100%;
+position:absolute;
+
+
+}
+
+.btn{
+ 
+   margin-top: 987rpx; 
+  margin-left:135rpx;
+  /* margin-bottom: 40rpx; */
+  width:480rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color:#F703F3;
+  background:rgba(255,255,255,1);
+border-radius:40rpx;
+}
+.btn_img{
+  width:40rpx;
+  height:40rpx;
+  vertical-align: middle;
+}

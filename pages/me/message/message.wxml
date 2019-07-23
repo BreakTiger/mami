@@ -1,0 +1,28 @@
+<!--pages/me/message/message.wxml-->
+<view class="third-card">
+
+
+<!-- 如果已经报名成为了百万妈咪  就会有为我投票和为我留言两个列表 -->
+  <view class="list" bindtap="voteInto" wx:if="{{is_info==1}}">
+    <view class="item flexba">
+      <view class="listtext">
+        <image class="list-icon" src="../../../imgs/me/icon1@2x.png"></image>为我投票的</view>
+      <image class="arrow" src='../../../imgs/me/arrow.png'></image>
+    </view>
+  </view>
+ 
+  <view class="list" bindtap="messageInto" wx:if="{{is_info==1}}">
+    <view class="item flexba">
+      <view class="listtext">
+        <image class="list-icon" src="../../../imgs/me/icon3@2x.png"></image> 给我留言的</view>
+      <image class="arrow" src='../../../imgs/me/arrow.png'></image>
+    </view>
+  </view>
+  <view class="list" bindtap="systemInto">
+    <view class="item flexba">
+      <view class="listtext">
+        <image class="list-icon" src="../../../imgs/me/icon4@2x.png"></image> 系统通知</view>
+      <image class="arrow" src='../../../imgs/me/arrow.png'></image>
+    </view>
+  </view>
+</view>

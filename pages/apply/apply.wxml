@@ -1,0 +1,7 @@
+<!--pages/apply/apply.wxml-->
+<view class="outbox">
+<image class="applyimg" src="{{url}}"></image>
+
+<button class="btn" bindtap="clickapply"><image  class="btn_img" src="../../imgs/index/tab_s_2.png"></image> 立即报名百万妈咪</button>
+
+</view>

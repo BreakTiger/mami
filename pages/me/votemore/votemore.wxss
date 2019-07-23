@@ -1,0 +1,77 @@
+/* pages/me/votemore/votemore.wxss */
+
+
+.messagelist {
+width:100%;
+height:140rpx;
+border-bottom:1px solid #f7f7f7;
+
+}
+
+.leftimg {
+  width: 15%;
+  text-align: center;
+  float: left;
+  padding-top:46rpx;
+
+}
+
+.messageimg {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.rightcontain {
+  width: 600rpx;
+  float: left;
+  /* height:auto;
+margin-top:12rpx; */
+  /* margin-bottom: 40rpx; */
+  padding-top:46rpx;
+
+}
+
+.time {
+color:#999;
+font-size:22rpx;
+margin-top:5rpx;
+margin-bottom:30rpx;
+
+}
+
+.clearfloat {
+  clear: both;
+}
+
+.transmit-show {
+  /* width: 20%; */
+  height: 80rpx;
+  float: right;
+  margin-top: -65rpx;
+}
+
+.zan{
+  width:28rpx;
+  height:25rpx;
+  margin-right:21rpx;
+  vertical-align:middle;
+  float:right;
+   margin-top:-15rpx;
+}
+.othername{
+  font-size: 26rpx;
+}
+.tp{
+  font-size:28rpx;
+}
+
+.nullpage{
+  width:100%;
+  margin:0 auto;
+}
+
+.bacimg{
+width:100%;
+margin: 0 auto;
+}

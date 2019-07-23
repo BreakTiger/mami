@@ -1,0 +1,54 @@
+/* pages/apply/success/success.wxss */
+
+.submitbox {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.successbox {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.success {
+  width: 200rpx;
+  margin: 0 auto;
+  height: 200rpx;
+}
+
+.tips {
+  margin-top: 60rpx;
+  font-size: 40rpx;
+  color: #000;
+}
+
+.success_text {
+  width: 556rpx;
+  margin: 0 auto;
+  height: 68rpx;
+  font-size: 28rpx;
+  color: #888;
+  line-height: 40rpx;
+  margin-top: 43rpx;
+}
+
+.btn{
+  width:480rpx;
+height:80rpx;
+line-height: 80rpx;
+background:rgba(160,6,251,1);
+border-radius:8rpx;
+  color: white;
+  font-size: 32rpx;
+  margin: 78rpx auto;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4rpx 8rpx 0 rgba(160, 160, 160, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:linear-gradient(-45deg, #F803F2 0%, #A006FB 100%);
+
+}

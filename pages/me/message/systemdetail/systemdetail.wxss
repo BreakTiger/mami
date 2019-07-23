@@ -1,0 +1,96 @@
+/* pages/me/message/systemdetail/systemdetail.wxss */
+
+page {
+  height: 100%;
+  background: #ffffff;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #f7f7f7;
+}
+
+.time {
+  width: 100%;
+  height: 117rpx;
+  margin-bottom:15rpx;
+}
+
+.pubdate {
+  float: left;
+  background: #f5f5f5;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+  margin: 0 auto;
+  padding: 5rpx 30rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.2;
+  border-radius: 8rpx;
+  color: #ffffff;
+  font-size: 22rpx;
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 60rpx;
+}
+
+.xt {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 0rpx;
+  margin-bottom: 20rpx;
+}
+
+.messagedetail {
+  /* width:595rpx; *//* height:71rpx; */
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: #333;
+}
+
+.card {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 200rpx;
+  background: #fff;
+}
+
+.leftimg {
+  width: 15%;
+  float: left;
+  margin-top: 42rpx;
+  text-align: center;
+}
+
+.rightcontain {
+  width: 82%;
+  float: right;
+  margin-top: 42rpx;
+  margin-right: 10rpx;
+}
+
+
+/* 无数据显示 */
+.nullpage{
+  width:100%;
+  height: auto;
+  margin: 0 auto;
+}
+.bacimg{
+  width:100%;
+  margin: 0 auto;
+}
+.nulltext{
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28rpx;
+}
